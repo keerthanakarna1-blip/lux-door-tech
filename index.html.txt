@@ -1,0 +1,106 @@
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/hero_bg.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    text-shadow: 0 0 20px var(--primary-color);
+    animation: glowText 2s infinite alternate;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin: 20px 0 40px;
+    color: #ccc;
+}
+
+.hero .btn {
+    padding: 15px 35px;
+    font-size: 1rem;
+    border-radius: 12px;
+    margin: 0 10px;
+    background: var(--primary-color);
+    color: #0f0f0f;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.hero .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--primary-color);
+}
+
+.hero .btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.hero .btn-outline:hover {
+    background: var(--primary-color);
+    color: #0f0f0f;
+}
+
+/* Glow animation */
+@keyframes glowText {
+    from { text-shadow: 0 0 20px var(--primary-color); }
+    to { text-shadow: 0 0 50px var(--primary-color); }
+}
+
+/* Features Section */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.grid-container .card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0,255,255,0.2);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.grid-container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 60px var(--primary-color);
+}
+
+.grid-container .card div:first-child {
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+/* CTA Section */
+.section a.btn {
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.section a.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px var(--primary-color);
+}
+
+/* Footer */
+.footer-bottom p {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+}
